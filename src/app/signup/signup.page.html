@@ -1,0 +1,73 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Sign Up!</ion-card-title>
+      <ion-card-subtitle>Kindly create your account </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-input placeholder="Enter Name" type="text"  [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Email" type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Phone" type="tel" [(ngModel)]="telephone"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Confirm Password" type="password" [(ngModel)]="confirm_password"></ion-input>
+      </ion-item>
+
+      <div class="bottom-section">
+        <ion-button shape="round" (click)="signup()" [disabled]="disabledbtn">
+          Sign Up
+        </ion-button>
+        <span>Already have an account? <a [routerLink]="['/login']">Log In</a></span>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content> -->
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- <ion-button color="primary">
+        <ion-icon slot="icon-only" name="arrow-back" href="/login"></ion-icon>
+      </ion-button> -->
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h1>Create your <br/> Account</h1>
+
+  <div id="form">
+    <app-input placeholder="Name" [(ngModel)]="name" ngDefaultControl></app-input>
+    <app-input placeholder="Email" [(ngModel)]="email" ngDefaultControl></app-input>
+    <app-input type="tel" placeholder="Mobile Number" [(ngModel)]="telephone" ngDefaultControl></app-input>
+
+    <app-input type="password" placeholder="Password" [(ngModel)]="password" ngDefaultControl></app-input>
+
+    <app-input type="password" placeholder="Confirm password" [(ngModel)]="confirm_password" ngDefaultControl></app-input>    
+
+    <ion-button expand="block" shape="round" (click)="signup()" [disabled]="disabledbtn" id="signup">Sign Up</ion-button>
+  </div>
+  <p>By pressing 'SignUp' you agree to <br/> our terms & conditions</p>
+
+  <p id="user">Already have an account? <a [routerLink]="['/login']" id="login-link" style="padding-left: 10px;">Log In</a></p>
+
+
+
+</ion-content>

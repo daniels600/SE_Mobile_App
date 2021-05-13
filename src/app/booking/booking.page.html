@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary" >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+      <ion-title>Book Reservation</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+
+<ion-content class="ion-padding">
+  
+  <div class="upload_image">
+    <!-- <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="f">Female</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+      </ion-select>
+    </ion-item> -->
+
+    <ion-item>
+      <ion-label position="floating">Start Time</ion-label>
+      <ion-datetime displayFormat="HH:mm" [(ngModel)]="start_time"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">End Time</ion-label>
+      <ion-datetime displayFormat="HH:mm" [(ngModel)]="end_time"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Occupant's Number</ion-label>
+      <ion-input [(ngModel)]="Capacity"></ion-input>
+    </ion-item>
+    <div class="book-btn" style="margin-top: 5%">
+      <ion-button (click)="Book()" expand="block" shape="round" style="color: white; font-weight: 600;">
+        Book Reservation
+      </ion-button>
+    </div>
+    
+
+  </div>
+        
+  
+</ion-content>

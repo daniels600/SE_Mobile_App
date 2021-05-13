@@ -1,5 +1,7 @@
 {
   "name": "eatly-GH",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

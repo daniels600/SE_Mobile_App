@@ -1,0 +1,73 @@
+<ion-header class="ion-no-border">
+  <!-- <ion-item lines="none"> -->
+  <!-- <ion-icon slot="end" name="location"></ion-icon>
+  <ion-avatar>
+    <img src="assets/icon/Eately-01.png" alt="logo">
+  </ion-avatar>
+  <ion-label>
+    <h2>Eately GH</h2>
+    <p>Habib Dev.</p>
+  </ion-label> -->
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon name="back-button" size="large" slot="start"></ion-icon>
+    </ion-buttons>
+
+    <ion-title>Nearby Restaurants</ion-title>
+  </ion-toolbar>
+
+  <!-- </ion-item> -->
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <div class="ion-padding" *ngFor="let restaurant of result "  >
+
+    <ion-item [routerLink]="['/', restaurant.name, restaurant.opening_hours, restaurant.rating, restaurant.user_rating,restaurant.vicinity,restaurant.location]"  >
+
+      <ion-thumbnail slot="start" *ngFor="let pic of pictures">
+
+        <img [src]="pic.photo_reference">
+      </ion-thumbnail>
+
+      <ion-card class="Rest-details">
+        <ion-card-header>
+          <ion-card-title>{{restaurant.name}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+         Location:{{restaurant.vicinity}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </div>
+
+
+
+
+  <div class="ion-padding" *ngFor="let restaurant of restaurantapi "  >
+
+    <ion-item [routerLink]="['/', restaurant.name, restaurant.opening_hours, restaurant.rating, restaurant.user_rating,restaurant.vicinity,restaurant.location]"  >
+
+      <ion-thumbnail slot="start" >
+
+        <img [src]="restaurant.res_image" >
+      </ion-thumbnail>
+
+      <ion-card class="Rest-details">
+        <ion-card-header>
+          <ion-card-title>{{restaurant.restaurant_name}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          Tel: {{restaurant.restaurant_telephone}}
+          Location:{{restaurant.restaurant_address}}
+          Opening_time: {{restaurant.opening_time}}
+          Closing_time: {{restaurant.reatausrant_closiing_time}}
+
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </div>
+
+
+</ion-content>

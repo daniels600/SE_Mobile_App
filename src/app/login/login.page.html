@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- <ion-button color="primary">
+        <ion-icon slot="icon-only" name="arrow-back" routerLink="['/home']"></ion-icon>
+      </ion-button> -->
+    </ion-buttons>
+    <!-- <ion-buttons slot="end">
+      <ion-button (click)="openRegister()" >Sign up</ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div id="header">
+    <h1>Login</h1>
+    <img src="assets/icon/Eately-01.png"/>
+  </div>
+
+
+  <div id="form">
+    <app-input placeholder="Email" type="email" [(ngModel)]="email" ngDefaultControl></app-input>
+    <app-input placeholder="Password" type="password" [(ngModel)]="password" ngDefaultControl></app-input>
+
+    <ion-button expand="block" shape="round" (click)="login_user()" id="login">Login</ion-button>
+    <!-- <a [routerLink]="['/forgot-password']">Forgot Password</a> -->
+
+    <div class="not-user">
+      <p id="signup">Don't have an account? <a (click)="openRegister()" style="padding-left: 10px;">Sign Up</a></p> 
+    </div>
+
+ 
+  </div>
+
+</ion-content>
